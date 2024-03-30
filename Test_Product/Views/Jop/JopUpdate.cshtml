@@ -1,0 +1,15 @@
+﻿@model EntityLayer.Concrete.Jop
+@{
+    ViewData["Title"] = "JopUpdate";
+    Layout = "~/Views/Shared/_UILayout.cshtml";
+}
+
+<form method="post">
+    @Html.Label("ID")
+    @Html.TextBoxFor(x=>x.JopID,new {@class="form-control"})
+    <br />
+    @Html.Label("ID")
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary">Meslek Güncelle</button>
+</form>
