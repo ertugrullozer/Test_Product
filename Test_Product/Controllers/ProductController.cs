@@ -43,5 +43,23 @@ namespace Test_Product.Controllers
             return View();
          
         }
+        public IActionResult DeleteProduct(int id)
+        {
+            var value = productManager.TGetById(id);
+            productManager.TDelete(value);
+            return RedirectToAction("Index");
+        }
+        [HttpGet]
+        public ActionResult UpdateProduct(int id) 
+        {
+            var value = productManager.TGetById(id);
+            return View(value);
+        }
+        [HttpPost]
+        public ActionResult UpdateProduct(Product p) 
+        {
+            productManager.TUpdate(p);
+            return RedirectToAction("Index");
+        }
     }
 }

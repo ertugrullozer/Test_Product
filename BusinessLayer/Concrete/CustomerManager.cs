@@ -1,5 +1,6 @@
 ﻿using BusinessLayer.Abstract;
 using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,16 @@ namespace BusinessLayer.Concrete
     public class CustomerManager : ICustomerService
     {
         ICustomerService _customerService;
+        private EfCustomerDal efCustomerDal;
 
         public CustomerManager(ICustomerService customerService)
         {
             _customerService = customerService;
+        }
+
+        public CustomerManager(EfCustomerDal efCustomerDal)
+        {
+            this.efCustomerDal = efCustomerDal;
         }
 
         public void TDelete(Customer t)
