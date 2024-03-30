@@ -12,42 +12,39 @@ namespace BusinessLayer.Concrete
 {
     public class CustomerManager : ICustomerService
     {
-        ICustomerService _customerService;
-        private EfCustomerDal efCustomerDal;
+        ICustomerDal _customerDal;
 
-        public CustomerManager(ICustomerService customerService)
+
+        public CustomerManager(ICustomerDal customerDal)
         {
-            _customerService = customerService;
+            _customerDal = customerDal;
         }
 
-        public CustomerManager(EfCustomerDal efCustomerDal)
-        {
-            this.efCustomerDal = efCustomerDal;
-        }
+    
 
         public void TDelete(Customer t)
         {
-            _customerService.TDelete(t);
+            _customerDal.Delete(t);
         }
 
         public Customer TGetById(int id)
         {
-           return _customerService.TGetById(id);
+           return _customerDal.GetById(id);
         }
 
         public List<Customer> TGetList()
         {
-           return _customerService.TGetList();
+           return _customerDal.GetList();
         }
 
         public void TInsert(Customer t)
         {
-          _customerService.TInsert(t);
+          _customerDal.Insert(t);
         }
 
         public void TUpdate(Customer t)
         {
-           _customerService.TUpdate(t);
+          _customerDal.Updete(t);
         }
     }
 }

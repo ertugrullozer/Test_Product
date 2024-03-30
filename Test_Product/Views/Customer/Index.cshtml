@@ -11,6 +11,8 @@
         <th>#</th>
         <th>Müşteri Ad</th>
         <th>Müşteri Şehir</th>
+        <th>Sil</th>
+        <th>Güncelle</th>
 
     </tr>
     @foreach (var item in Model)
@@ -20,6 +22,10 @@
             <td>@item.ID</td>
             <td>@item.Name</td>
             <td>@item.City</td>
+            <td><a href="/Customer/CustomerDelete/@item.ID" class="btn btn-danger">Sil</a></td>
+            <td><a href="/Customer/CustomerUpdate/@item.ID" class="btn btn-success">Güncelle</a></td>
+            
         </tr>
     }
 </table>
+<a href="/Customer/CustomerAdd" class="btn btn-info">Yeni Müşteri Ekle</a>
