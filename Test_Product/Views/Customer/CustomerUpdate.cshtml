@@ -16,8 +16,7 @@
     @Html.TextBoxFor(x => x.City, new { @class = "form-control" })
     <br />
     @Html.Label("Müşteri Meslek")
-    @Html.TextBoxFor(x => x.Jop.Name, new { @class = "form-control" })
-    <br />
-    <button class="btn btn-success">Güncelle</button>
+    @Html.DropDownListFor(x=>x.JopID,(List<SelectListItem>)ViewBag.u,new {@class="form-control"})
+    <button class="btn btn-success mt-3">Güncelle</button>
 </form>
 

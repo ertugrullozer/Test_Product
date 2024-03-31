@@ -15,9 +15,8 @@
     @Html.ValidationMessageFor(x=>x.City)
     <br />
     @Html.Label("Müşteri Meslek")
-    @Html.TextBoxFor(x => x.Jop.Name, new { @class = "form-control" })
-    @Html.ValidationMessageFor(x => x.Jop.Name)
-    <br />
-    <button class="btn btn-primary">Müşteri Ekle</button>
+    @Html.DropDownListFor(x=>x.JopID,(List<SelectListItem>)ViewBag.v,new{@class="form-control"})
+
+    <button class="btn btn-primary mt-3">Müşteri Ekle</button>
 </form>
 
