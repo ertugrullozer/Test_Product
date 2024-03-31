@@ -9,5 +9,8 @@ namespace BusinessLayer.Abstract
 {
     public interface ICustomerService:IGenericService<Customer>
     {
+        //CustomerManager gidiyoruz
+        //3.işlem
+        List<Customer> GetCustomerListWithJop();
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace BusinessLayer.Concrete
 {
-    
+
     public class JopManager : IJopService
     {
         IJopDal _jopDal;
@@ -22,13 +22,13 @@ namespace BusinessLayer.Concrete
 
         public void TDelete(Jop t)
         {
-         _jopDal.Delete(t);
+            _jopDal.Delete(t);
 
         }
 
         public Jop TGetById(int id)
         {
-          return _jopDal.GetById(id);
+            return _jopDal.GetById(id);
         }
 
         public List<Jop> TGetList()
@@ -38,12 +38,13 @@ namespace BusinessLayer.Concrete
 
         public void TInsert(Jop t)
         {
-          _jopDal.Insert(t);
+            _jopDal.Insert(t);
         }
 
         public void TUpdate(Jop t)
         {
             _jopDal.Updete(t);
         }
-    }
+
+    } 
 }

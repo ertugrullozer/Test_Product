@@ -12,7 +12,8 @@ namespace Test_Product.Controllers
         CustomerManager customerManager = new CustomerManager(new EfCustomerDal());
         public IActionResult Index()
         {
-            var values= customerManager.TGetList();
+            //yeni tanımladığımız metot kullanıyoruz
+            var values = customerManager.GetCustomerListWithJop();
             return View(values);
         }
         [HttpGet]

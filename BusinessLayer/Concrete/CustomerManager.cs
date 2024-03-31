@@ -19,8 +19,14 @@ namespace BusinessLayer.Concrete
         {
             _customerDal = customerDal;
         }
+        //implemente ediyoruz ve metot tanımlıyoruz 
+        //4.işlem customercontroler gidiyoruz
+        public List<Customer> GetCustomerListWithJop()
+        {
+           return _customerDal.GetCustomerListWithJop();
+        }
 
-    
+   
 
         public void TDelete(Customer t)
         {
@@ -46,5 +52,7 @@ namespace BusinessLayer.Concrete
         {
           _customerDal.Updete(t);
         }
+
+  
     }
 }

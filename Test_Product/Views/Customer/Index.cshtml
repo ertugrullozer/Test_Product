@@ -11,6 +11,7 @@
         <th>#</th>
         <th>Müşteri Ad</th>
         <th>Müşteri Şehir</th>
+        <th>Müşteri Meslek</th>
         <th>Sil</th>
         <th>Güncelle</th>
 
@@ -22,6 +23,7 @@
             <td>@item.ID</td>
             <td>@item.Name</td>
             <td>@item.City</td>
+            <td>@item.Jop.Name</td>
             <td><a href="/Customer/CustomerDelete/@item.ID" class="btn btn-danger">Sil</a></td>
             <td><a href="/Customer/CustomerUpdate/@item.ID" class="btn btn-success">Güncelle</a></td>
             

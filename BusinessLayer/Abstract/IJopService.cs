@@ -8,6 +8,6 @@ using System.Threading.Tasks;
 namespace BusinessLayer.Abstract
 {
     public interface IJopService:IGenericService<Jop>
-    {
+    {  
     }
 }

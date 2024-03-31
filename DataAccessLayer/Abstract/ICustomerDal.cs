@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace DataAccessLayer.Abstract
 {
     public interface ICustomerDal:IGenericDal<Customer>
-    {
-  
+    {   //1.adım efcustomer gidiyoruz
+        List<Customer> GetCustomerListWithJop();
     }
 }
