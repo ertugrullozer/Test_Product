@@ -35,7 +35,7 @@ namespace Test_Product.Controllers
                 var result=await _userManager.CreateAsync(appUser);
                 if (result.Succeeded) 
                 {
-                    return RedirectToAction("Index");
+                    return RedirectToAction("Index","Login");
                 }
                 else
                 {

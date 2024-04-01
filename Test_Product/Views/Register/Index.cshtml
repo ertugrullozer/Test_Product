@@ -1,4 +1,4 @@
-﻿
+﻿@model Test_Product.Models.UserRegisterViewModel
 @{
     Layout = null;
 }
@@ -25,28 +25,38 @@
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header"><h3 class="text-center font-weight-light my-4">Yeni Bir Hesap oluştur</h3></div>
                                 <div class="card-body">
-                                    <form method="post">
+                                    <form method="post" >
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputFirstName" name="Name" type="text" />
                                                     <label for="inputFirstName">Adınız</label>
+                                                   
+                                                        <span asp-validation-for="SurName"></span>
+                                                
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating">
                                                     <input class="form-control" id="inputLastName" name="SurName" type="text" />
                                                     <label for="inputLastName">Soyadınız</label>
+                                                    <span asp-validation-for="SurName"></span>
+
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input class="form-control" id="inputEmail" name="Mail" type="email" />
                                             <label for="inputEmail">Email</label>
+                                            <span asp-validation-for="Mail"></span>
+
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input class="form-control" id="inputEmail" name="UserName" type="email" />
+                                            <input class="form-control" id="inputEmail" name="UserName" type="text" />
                                             <label for="inputEmail">kullanıcı Adı</label>
+                                            <span asp-validation-for="UserName"></span>
+
                                         </div>
                                    
                                         <div class="row mb-3">
@@ -54,12 +64,16 @@
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPassword" name="Password" type="password" />
                                                     <label for="inputPassword">Şifre</label>
+                                                    <span asp-validation-for="Password"></span>
+
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-floating mb-3 mb-md-0">
                                                     <input class="form-control" id="inputPasswordConfirm" name="ConfirmPassword" type="password" />
                                                     <label for="inputPasswordConfirm">Şifre Tekrar</label>
+                                                    <span asp-validation-for="ConfirmPassword"></span>
+
                                                 </div>
                                             </div>
                                         </div>
